@@ -7,37 +7,12 @@ public class Main {
 
         //This is with only one device connected....
 
-
+        String s;
         ADBCommand adbCommand = new ADBCommand();
 
-        adbCommand.lockRotation();
-        Thread.sleep(8000);
-        adbCommand.lockLandscape();
-        System.out.println(adbCommand.currentScreenOrientation());//1
-        Thread.sleep(8000);
-        adbCommand.lockPortrait();
-        System.out.println(adbCommand.currentScreenOrientation());//0
-        Thread.sleep(8000);
-        adbCommand.lockReverseLandscape();
-        System.out.println(adbCommand.currentScreenOrientation());//3
-        Thread.sleep(8000);
-        adbCommand.lockReversePortrait();
-        System.out.println(adbCommand.currentScreenOrientation());//2
-        Thread.sleep(8000);
-        adbCommand.lockPortrait();
-        System.out.println(adbCommand.currentScreenOrientation());//0
-        adbCommand.enableAutoRotation();
-//        adbCommand.screenShot();
-//
-//        Thread.sleep(8000);
-//
-//        ADBInterface obj = new ADBCommand();
-//
-//        adbCommand.enableAirplaneMode();
-//        Thread.sleep(10000);
-//
-//        adbCommand.disableAirplaneMode();
+        System.out.println("Is there a notification? " +adbCommand.checkForMedbridgeNotification());
 
+        adbCommand.swipeNotificationAway();
 
     }
 

@@ -12,6 +12,8 @@ public interface ADBInterface {
     void stopScreenRecord();
     void enableAirplaneMode();
     void disableAirplaneMode();
+    void swipeNotificationAway();
+    boolean checkForMedbridgeNotification();
 }
 
 
