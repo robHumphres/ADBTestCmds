@@ -10,9 +10,24 @@ public class Main {
         String s;
         ADBCommand adbCommand = new ADBCommand();
 
-        System.out.println("Is there a notification? " +adbCommand.checkForMedbridgeNotification());
+//        System.out.println("Is there a notification? " +adbCommand.checkForMedbridgeNotification());
+        adbCommand.lockRotation();
+        Thread.sleep(2000);
+        adbCommand.lockLandscape();
+        Thread.sleep(2000);
+        adbCommand.lockReversePortrait();
+        Thread.sleep(2000);
+        adbCommand.lockReverseLandscape();
 
-        adbCommand.swipeNotificationAway();
+        Thread.sleep(2000);
+
+        adbCommand.lockPortrait();
+
+
+
+
+
+//        adbCommand.swipeNotificationAway();
 
     }
 

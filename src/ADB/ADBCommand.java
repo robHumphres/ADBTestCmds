@@ -165,8 +165,6 @@ public class ADBCommand implements ADBInterface {
         executeADBCmd(startScreenRecord);
     }
 
-    ;
-
     public void stopScreenRecord() {
         String stopScreenRecord = "pull /sdcard/screencap.png";
 
@@ -241,6 +239,12 @@ public class ADBCommand implements ADBInterface {
         return false;
 
     }
+
+    public void goHome(){
+        String goHomeCmd = "shell input keyevent KEYCODE_HOME";
+        executeADBCmd(goHomeCmd);
+    }
+
 
     public String executeADBCmd(String command) {
 
